@@ -7,10 +7,10 @@ class Bed extends Products
     public $type;
     public $model;
 
-    function __construct($_name, $_description, $_category, $_img, $_type, $_model)
+    function __construct($name, $description, $category, $img, $type, $model)
     {
-        parent::__construct($_name, $_description, $_category, $_img);
-        $this->type = $_type;
-        $this->model = $_model;
+        parent::__construct($name, $description, $category, $img);
+        $this->type = $type;
+        $this->model = $model;
     }
 }
