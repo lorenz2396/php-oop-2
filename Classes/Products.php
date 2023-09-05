@@ -7,23 +7,27 @@ class Products {
     public $price;
     public $category;
     public $img;
-    public $isForDogs;
-    public $isForCats;
+    public $available;
 
-
-    function __construct($name, $description, $category, $img)
+    function __construct(
+        $name,
+        $description,
+        $category,
+        $img,
+        $available = true)
     {
         $this->name = $name;
         $this->description = $description;
         $this->category = $category;
         $this->img = $img;
+        $this->available = $available;
     }
 
     public function setPrice($price)
     {
-        if ($price < 0) {
+        if (is_numeric($price) && $price < 0) {
             throw new Exception("Free");
-        } else {
+        } else if(is_numeric($price)) {
             $this->price = $price;
         }
     }
