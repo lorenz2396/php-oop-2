@@ -26,8 +26,8 @@ class Products {
 
     public function setPrice($price)
     {
-        if (is_numeric($price) && $price < 0) {
-            throw new Exception("Free");
+        if (is_numeric($price) && $price < 1) {
+            throw new Exception("Price not valid");
         } else if(is_numeric($price)) {
             $this->price = $price;
         }

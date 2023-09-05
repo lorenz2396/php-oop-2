@@ -53,35 +53,14 @@ $products = [
         "Cuccia morbida"),
 ];
 
-// $products[0]->setPrice(3.99);
-// $products[1]->setPrice(70.00);
-// $products[2]->setPrice(9.99);
-// $products[3]->setPrice(12.99);
-// $products[4]->setPrice(44.90);
-
 
 try {
     $products[0]->setPrice(3.99);
-} catch (Exception $err) {
-    echo $err->getMessage();
-}
-try {
-    $products[1]->setPrice(110.00);
-} catch (Exception $err) {
-    echo $err->getMessage();
-}
-try {
-    $products[2]->setPrice(0);
-} catch (Exception $err) {
-    echo $err->getMessage();
-}
-try {
-    $products[3]->setPrice(12.49);
-} catch (Exception $err) {
-    echo $err->getMessage();
-}
-try {
+    $products[1]->setPrice(70.00);
+    $products[2]->setPrice(9.99);
+    $products[3]->setPrice(12.99);
     $products[4]->setPrice(44.90);
+
 } catch (Exception $err) {
     echo $err->getMessage();
 }
