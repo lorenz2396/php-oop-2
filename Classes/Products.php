@@ -14,7 +14,8 @@ class Products {
         $description,
         $category,
         $img,
-        $available = true)
+        $available = true
+    )
     {
         $this->name = $name;
         $this->description = $description;

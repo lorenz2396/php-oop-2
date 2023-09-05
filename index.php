@@ -5,7 +5,7 @@ require_once __DIR__ . "/Classes/Food.php";
 require_once __DIR__ . "/Classes/Bed.php";
 require_once __DIR__ . "/Classes/Toys.php";
 require_once __DIR__ . "/Classes/Categories.php";
-require_once __DIR__ . "/Classes/db.php";
+require_once __DIR__ . "/db.php";
 
 
 
@@ -53,6 +53,23 @@ require_once __DIR__ . "/Classes/db.php";
                                     <p class="card-text">Prezzo: <?php echo $product->getPrice(); ?> €</p>
                                     <p class="card-text">Tipo: <?php echo $product->type; ?></p>
                                     <p class="card-text">Categoria: <?php echo $product->category; ?></p>
+                                    <p>
+                                        <?php
+                                            if ($product -> available) {
+                                        ?>
+                                        <button class="btn btn-success">
+                                                Acquista
+                                        </button>
+                                        <?php 
+                                            } else {
+                                        ?>
+                                        <button class="btn btn-danger">
+                                                Non Disponibile
+                                        </button>
+                                        <?php
+                                            } 
+                                        ?>
+                                    </p>
                                 </div>
                             </div>
                         </div>

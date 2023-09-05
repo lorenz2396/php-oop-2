@@ -13,7 +13,8 @@ $products = [
         "Cani",
         "https://arcaplanet.vtexassets.com/arquivos/ids/240047-1800-1800/expecial-cane-biscotti-premio.jpg?v=1770855353&quality=1&width=1800&height=1800",
         true,
-        "20/06/2025"
+        "20/06/2025",
+        "Cibo"
     ),
     new Bed(
         "Cuccia esterna per Cani",
@@ -39,7 +40,8 @@ $products = [
         "Gatti",
         "https://arcaplanet.vtexassets.com/arquivos/ids/224343-1800-1800/virtus-native-seas-kitten.jpg?v=1770889891&quality=1&width=1800&height=1800", 
         true,
-        "27/09/2026"
+        "27/09/2026",
+        "Cibo per gatti"
     ),
     new Bed(
         "Cuccia Montana",
@@ -80,11 +82,6 @@ try {
 }
 try {
     $products[4]->setPrice(44.90);
-} catch (Exception $err) {
-    echo $err->getMessage();
-}
-try {
-    $products[5]->setPrice(3.60);
 } catch (Exception $err) {
     echo $err->getMessage();
 }
